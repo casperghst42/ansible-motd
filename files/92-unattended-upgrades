@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -x /usr/share/unattended-upgrades/update-motd-unattended-upgrades ]; then
+    exec /usr/share/unattended-upgrades/update-motd-unattended-upgrades
+fi
+
+if [ -f /var/run/reboot-required ] ; then
+    echo "[ reboot is required ]"
+fi
